@@ -19,7 +19,43 @@ xui.Class('App', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
+            
+            append(
+                xui.create("xui.UI.Image")
+                .setHost(host,"xui_ui_image4")
+                .setLeft("1.5238095238095237em")
+                .setTop("1.5238095238095237em")
+                .setSrc("{/}hello.png")
+            );
+            
+            append(
+                xui.create("xui.UI.Label")
+                .setHost(host,"xui_ui_label1")
+                .setLeft("9.142857142857142em")
+                .setTop("3.8095238095238093em")
+                .setWidth("7.771428571428571em")
+                .setHeight("6.552380952380952em")
+                .setCaption("Petey Talks App")
+            );
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button7")
+                .setLeft("19.047619047619047em")
+                .setTop("3.8095238095238093em")
+                .setCaption("Rich Editor")
+                .onClickDrop([
+                    {
+                        "desc" : "Action 1",
+                        "type" : "page",
+                        "target" : "App.RichEditor",
+                        "args" : [true],
+                        "method" : "switch",
+                        "event" : 1
+                    }
+                ])
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
