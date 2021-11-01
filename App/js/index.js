@@ -39,21 +39,26 @@ xui.Class('App', 'xui.Module',{
             );
             
             append(
-                xui.create("xui.UI.Button")
-                .setHost(host,"xui_ui_button7")
-                .setLeft("19.047619047619047em")
-                .setTop("3.8095238095238093em")
-                .setCaption("Rich Editor")
-                .onClickDrop([
-                    {
-                        "desc" : "Action 1",
-                        "type" : "page",
-                        "target" : "App.RichEditor",
-                        "args" : [true],
-                        "method" : "switch",
-                        "event" : 1
-                    }
-                ])
+                xui.create("xui.UI.RichEditor")
+                .setHost(host,"xui_ui_richeditor4")
+                .setLeft("3.8095238095238093em")
+                .setTop("9.142857142857142em")
+                .setHeight("26em")
+                .setLabelSize("2em")
+                .setLabelPos("top")
+                .setLabelCaption("RichEditor")
+                .setLabelHAlign("left")
+            );
+            
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput54")
+                .setLeft("37.333333333333336em")
+                .setTop("11.428571428571429em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("Color Picker")
+                .setType("color")
             );
             
             return children;
